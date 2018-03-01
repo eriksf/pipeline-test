@@ -5,9 +5,6 @@
 
 set -x
 
-curl -L https://raw.githubusercontent.com/sd2e/sd2e-cli/master/install/install.sh | sh
-source ~/.bashrc
-
 tenants-init -t sd2e
 
 client="sd2e_client_$BUILD_TAG"

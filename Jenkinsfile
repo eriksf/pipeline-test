@@ -17,7 +17,7 @@ def testCreds() {
     stage('Test Credentials') {
     	echo "In stage"
     	echo "PATH = $PATH"
-	withCredentials([usernamePassword(credentialsId: '40c06f6c-faaf-44df-8973-6f6f21ec600f',
+	withCredentials([usernamePassword(credentialsId: '4d8e06da-d728-4dcc-aa32-9e10bb8afb73',
 					  passwordVariable: 'AGAVE_PASSWORD',
 					  usernameVariable: 'AGAVE_USER')]) {
             sh 'ls'
