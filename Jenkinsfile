@@ -9,8 +9,17 @@ node {
   }
   withPythonEnv('Python2.7') {
     installDeps()
-    testPython()
+    // testPython()
+    testDir()
   }
+}
+
+def testDir() {
+    if (fileExists('/test/a/file.txt')) {
+        echo "File exists!"
+    } else {
+        echo "Nope, no file."
+    }
 }
 
 def testCreds() {
