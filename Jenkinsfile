@@ -15,10 +15,13 @@ node {
 }
 
 def testDir() {
-    if (fileExists('/test/a/file.txt')) {
-        echo "File exists!"
-    } else {
-        echo "Nope, no file."
+    stage('Test file/dir existence') {
+
+        if (fileExists('/test/a/file.txt')) {
+            echo "File exists!"
+        } else {
+            echo "Nope, no file."
+        }
     }
 }
 
