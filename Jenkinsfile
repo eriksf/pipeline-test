@@ -16,11 +16,11 @@ node {
 
 def testDir() {
     stage('Test file/dir existence') {
-
-        if (fileExists('test/a')) {
-            echo "File exists!"
+        def myfile = 'test/a'
+        if (fileExists(myfile)) {
+            echo "File/dir ${myfile} exists!"
         } else {
-            echo "Nope, no file."
+            echo "Nope, can't find ${myfile}."
         }
     }
 }
