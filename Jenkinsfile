@@ -16,7 +16,7 @@ node {
 
 def testDir() {
     stage('Test file/dir existence') {
-        def myfile = 'test/a'
+        def myfile = 'test/ab'
         if (fileExists(myfile)) {
             echo "File/dir ${myfile} exists!"
         } else {
